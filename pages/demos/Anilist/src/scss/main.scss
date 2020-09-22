@@ -1,0 +1,109 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Bangers", cursive;
+}
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+.heading-primary {
+  font-size: 6rem;
+  margin: 1.5rem;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 2rem;
+  padding: 0.8rem 1rem;
+  background-color: transparent;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0px 1px 3px #ccc;
+  transition: all 0.1s;
+  &:hover {
+    box-shadow: 0px 3px 8px #ccc;
+    transform: translateY(-2px);
+  }
+}
+
+.search {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  &__input {
+    font-family: inherit;
+    margin: 0 auto;
+    font-size: 5rem;
+    height: 5rem;
+    width: 90%;
+  }
+  &__button {
+    margin-right: 5rem;
+    margin-top: 1rem;
+  }
+  &__message {
+    font-size: 3rem;
+    padding: 2rem 1.5rem;
+  }
+}
+
+.list {
+  &__item {
+    display: grid;
+    grid-template-areas:
+      "image title"
+      "image paragraph"
+      "link links";
+
+    grid-auto-rows: min-content;
+    margin: -0.5rem 0;
+    padding: 1.5rem;
+
+    &__image {
+      grid-area: image;
+      margin-right: 1.5rem;
+    }
+    &__title {
+      grid-area: title;
+      font-size: 8rem;
+      margin-bottom: 1.5rem;
+    }
+    &__paragraph {
+      grid-area: paragraph;
+      font-size: 3.5rem;
+    }
+    &__links {
+      grid-area: links;
+      display: flex;
+      flex-wrap: wrap;
+
+      &__item {
+        list-style: none;
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+      }
+      &__link {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5rem;
+}
